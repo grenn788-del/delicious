@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Delicious by Delice — La fraîcheur et la saveur à chaque bouchée</title>
+  <meta name="description" content="Néems croustillants, poulet mariné, jus naturels 100% faits maison et bouchées fraîches à Bessengue, Douala. Livraison rapide partout à Douala. Commandez sur WhatsApp." />
+  <meta name="theme-color" content="#0a0605" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="assets/img/chef-flambe.webp" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Delicious by Delice — La fraîcheur et la saveur à chaque bouchée" />
+  <meta property="og:description" content="Néems, poulet, jus 100% maison et bouchées fraîches à Bessengue, Douala. Livraison rapide. Commandez sur WhatsApp." />
+  <meta property="og:image" content="assets/img/chef-flambe.webp" />
+  <meta property="og:locale" content="fr_CM" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FoodEstablishment",
+    "name": "Delicious by Delice",
+    "slogan": "La fraîcheur et la saveur à chaque bouchée !",
+    "address": { "@type": "PostalAddress", "streetAddress": "Bessengue, face hôtel Lewatt", "addressLocality": "Douala", "addressCountry": "CM" },
+    "telephone": ["+237653325523", "+237693653716"],
+    "sameAs": ["https://www.tiktok.com/@delice_nours"],
+    "servesCuisine": ["Street-food", "Jus naturels", "Cuisine maison"]
+  }
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header id="header">
+    <div class="hd-in">
+      <a href="#accueil" data-go="0" class="logo" aria-label="Delicious by Delice — accueil">
+        <img src="assets/logo.png" alt="Delicious by Delice" onerror="this.parentElement.classList.add('nologo');this.replaceWith(Object.assign(document.createElement('span'),{textContent:'Delicious by Delice'}))" />
+      </a>
+
+      <nav class="hd-nav" aria-label="Navigation principale">
+        <a href="#menu" data-go="2">Menu</a>
+        <a href="#experience" data-go="5">Box &amp; Cocktails</a>
+        <a href="#histoire" data-go="6">Notre Histoire</a>
+        <a href="#contact" data-go="7">Contact</a>
+      </nav>
+
+      <div class="hd-right">
+        <a class="btn btn-primary hd-cta" target="_blank" rel="noopener"
+           href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20souhaite%20commander%20%F0%9F%8D%B4">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.4-1.7a11.9 11.9 0 0 0 5.6 1.4c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3zM12 21.7c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.800 9.800 0 0 1-1.500-5.200C2.100 6.500 6.600 2.100 12 2.100c2.600 0 5.100 1 6.900 2.900a9.700 9.700 0 0 1 2.900 6.900c0 5.400-4.400 9.800-9.800 9.800zm5.400-7.300c-.3-.1-1.700-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.100-.3.200-.6.100a8 8 0 0 1-4-3.500c-.3-.5.3-.5.9-1.600.1-.2.1-.4 0-.5s-.7-1.600-.9-2.200c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.100-.8.400s-1 1-1 2.400 1 2.800 1.200 3c.1.200 2 3.100 4.900 4.300 1.800.8 2.500.9 3.400.7.6-.1 1.700-.7 2-1.400.2-.7.2-1.200.2-1.400-.1-.1-.3-.2-.6-.3z"/></svg>
+          Commander sur WhatsApp
+        </a>
+        <button id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="closed">
+      <nav aria-label="Navigation mobile">
+        <a href="#menu" data-go="2">Menu</a>
+        <a href="#experience" data-go="5">Box &amp; Cocktails</a>
+        <a href="#histoire" data-go="6">Notre Histoire</a>
+        <a href="#contact" data-go="7">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HUD de profondeur (rempli par JS) -->
+  <nav id="hud" aria-label="Sections du site"></nav>
+
+  <main id="accueil">
+    <div id="track">
+      <div id="stage">
+        <div id="world">
+
+          <!-- ================================================================
+               0 · ACCUEIL — diaporama (mêmes effets sur toutes les images)
+               ================================================================ -->
+          <section class="scene" id="s-hero" data-name="Accueil" data-len="1.2" aria-label="Accueil">
+
+            <div class="hero-bg par" id="heroBg" data-par="s:1,1.1">
+              <div class="slide active" data-origin="56% 58%" data-caption="Flambé minute">
+                <img src="assets/img/chef-flambe.webp" alt="Un chef fait flamber des champignons à la poêle" fetchpriority="high" />
+              </div>
+              <div class="slide" data-origin="68% 48%" data-caption="Néems dorés">
+                <img src="assets/img/nems-empiles.webp" alt="Néems croustillants empilés avec leur sauce" loading="lazy" style="object-position:35% 50%" />
+              </div>
+              <div class="slide" data-origin="24% 52%" data-caption="Poulet mariné">
+                <img src="assets/img/poulet-marine.webp" alt="Pilons de poulet marinés au pinceau" loading="lazy" style="object-position:22% 50%" />
+              </div>
+              <div class="slide" data-origin="30% 40%" data-caption="Grillades &amp; légumes">
+                <img src="assets/img/poulet-plat.webp" alt="Poulet rôti avec courgettes grillées et tomates" loading="lazy" />
+              </div>
+              <div class="flash" id="flash"></div>
+            </div>
+            <div class="hero-shade"></div>
+            <canvas id="embers" aria-hidden="true"></canvas>
+            <canvas id="stardust" aria-hidden="true"></canvas>
+
+            <div class="hero-copy t" data-at="-1">
+              <p class="loc"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10.2c0 6.3-8 12.3-8 12.3s-8-6-8-12.3a8 8 0 0 1 16 0z"/><circle cx="12" cy="10.2" r="2.8"/></svg>Bessengue · Douala</p>
+              <h1>Le goût du <em class="grad">fait maison</em>, réinventé.</h1>
+              <p class="lead">
+                Des néems dorés et croustillants, du poulet mariné, des jus pressés le matin même, des bouchées préparées minute.
+                À Bessengue, face hôtel Lewatt, tout est <strong>frais, généreux et livré partout à Douala</strong>.
+              </p>
+              <div class="cta-row">
+                <a href="#menu" data-go="2" class="btn btn-primary btn-lg">
+                  Explorer le Menu
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <a href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20souhaite%20commander%20%F0%9F%8D%B4" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Commander via WhatsApp</a>
+              </div>
+              <p class="script">La fraîcheur et la saveur à chaque bouchée&nbsp;!</p>
+            </div>
+
+            <!-- Points clés : un texte à la fois, sans cadre -->
+            <div class="keys t" id="keys" data-at="-1" aria-label="Les points clés de Delicious">
+              <div class="k on"><i>01</i><b>Fait maison</b><span>Des jus pressés aux néems dorés.</span></div>
+              <div class="k"><i>02</i><b>Ultra frais</b><span>Préparé le jour même.</span></div>
+              <div class="k"><i>03</i><b>Préparé minute</b><span>Chaque commande, à la commande.</span></div>
+              <div class="k"><i>04</i><b>Livré vite</b><span>Partout à Douala.</span></div>
+              <div class="k"><i>05</i><b>10 néems · 1&nbsp;000 FCFA</b><span>La box signature.</span></div>
+              <div class="k"><i>06</i><b>Jus 100% maison</b><span>Ananas-Passion · Baobab · Foléré.</span></div>
+            </div>
+
+            <div class="hero-ui t" data-at="-1">
+              <p class="cap" id="heroCap" aria-live="off">Flambé minute</p>
+              <div class="bars" id="heroBars" role="tablist" aria-label="Images d'accueil"></div>
+            </div>
+            <div class="scroll-cue t" data-at="-1" aria-hidden="true"><span>Défilez pour plonger</span><i></i></div>
+          </section>
+
+          <!-- ================================================================
+               1 · MANIFESTE — section blanche, formes qui dérivent
+               ================================================================ -->
+          <section class="scene light" id="s-manifeste" data-name="Manifeste" data-len="2.2" data-ats="0.03,0.12,0.28,0.44,0.6" aria-label="Nos promesses">
+            <div class="flow" aria-hidden="true"></div>
+            <div class="mesh par" data-par="y:0,-10;x:0,-3" aria-hidden="true"><i class="mb mb1"></i><i class="mb mb2"></i><i class="mb mb3"></i><i class="mb mb4"></i></div>
+            <div class="shape sh1 par" data-par="y:25,-75;r:0,40"></div>
+            <div class="shape sh2 par" data-par="y:40,-55;x:0,8"></div>
+            <div class="shape sh3 par" data-par="r:0,140;s:1,1.3"></div>
+            <div class="shape sh4 par" data-par="y:60,-90"></div>
+
+            <div class="mf-stack">
+            <p class="mf-intro eyebrow t">Ici, tout est</p>
+            <div class="w w1 t"><span class="o-text">Fait maison</span><small>Des jus pressés aux néems dorés.</small></div>
+            <div class="w w2 t"><span class="grad">Ultra frais</span><small>Des ingrédients choisis et préparés le jour même.</small></div>
+            <div class="w w3 t"><span>Préparé minute</span><small>Chaque commande, à la commande.</small></div>
+            <div class="w w4 t"><span class="o-text gold">Livré vite</span><small>Partout à Douala, chaud ou frais selon l'envie.</small></div>
+          </div>
+          </section>
+
+          <!-- ================================================================
+               2 · LES NÉEMS — plateau avec texte en anneau
+               ================================================================ -->
+          <section class="scene" id="s-plateau" data-name="Les néems" data-len="2" data-ats="0.03,0.1,0.55" aria-label="Les néems">
+            <div class="pl-back t"><h2>Les <em class="grad">néems</em></h2></div>
+
+            <div class="pl-wrap t fade par" data-par="s:.7,1" data-at="0.06" role="img" aria-label="Plateau noir de néems croustillants, entouré de texte">
+              <div class="pl-tilt">
+                <div class="pl-spin">
+                  <img class="pl-disc" src="assets/img/plateau-disque.webp" alt="" />
+
+                  <svg class="pl-ring r1" viewBox="0 0 1000 1000" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="gRing" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E23D28"/><stop offset=".55" stop-color="#F0702A"/><stop offset="1" stop-color="#F4C430"/></linearGradient>
+                      <path id="pathA" d="M500,500 m-372,0 a372,372 0 1,1 744,0 a372,372 0 1,1 -744,0"/>
+                    </defs>
+                    <text class="ring-a" fill="url(#gRing)"><textPath href="#pathA" textLength="2330" lengthAdjust="spacing">NÉEMS CROUSTILLANTS • DORÉS &amp; FONDANTS • PRÉPARÉS MINUTE • FAITS MAISON •</textPath></text>
+                  </svg>
+                  <svg class="pl-ring r2" viewBox="0 0 1000 1000" aria-hidden="true">
+                    <defs><path id="pathB" d="M500,500 m-452,0 a452,452 0 1,1 904,0 a452,452 0 1,1 -904,0"/></defs>
+                    <text class="ring-b"><textPath href="#pathB" textLength="2830" lengthAdjust="spacing">BESSENGUE · DOUALA · FACE HÔTEL LEWATT · LIVRAISON RAPIDE · COMMANDEZ SUR WHATSAPP · 10 NÉEMS = 1 000 FCFA ·</textPath></text>
+                  </svg>
+
+                  <div class="pl-tag t fade" data-at="0.2" style="--tx:-.62;--ty:-.24;--tz:150px"><b>Croustillant</b> dehors</div>
+                  <div class="pl-tag price t fade" data-at="0.28" style="--tx:.6;--ty:-.30;--tz:190px"><b>10 néems</b> · 1&nbsp;000 FCFA</div>
+                  <div class="pl-tag t fade" data-at="0.36" style="--tx:-.62;--ty:.30;--tz:110px">Moelleux <b>dedans</b></div>
+                  <div class="pl-tag t fade" data-at="0.44" style="--tx:.56;--ty:.27;--tz:140px">Préparés <b>à la commande</b></div>
+                </div>
+              </div>
+            </div>
+
+            <a class="pl-order btn btn-primary t" target="_blank" rel="noopener"
+               href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20voudrais%20commander%20une%20box%20de%2010%20n%C3%A9ems">
+              Commander la box
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </section>
+
+          <!-- ================================================================
+               3 · NÉEMS — macro (fond qui avance, textes haut / milieu / bas)
+               ================================================================ -->
+          <section class="scene" id="s-macro" data-name="Signature" data-len="2" data-ats="0.04,0.24,0.46" aria-label="Notre signature : les néems">
+            <div class="bg"><img class="par" data-par="s:1.08,1.32;x:3,-5;y:1,-3" style="object-position:35% 50%" src="assets/img/nems-empiles.webp" alt="Néems dorés empilés, l'un d'eux coupé laisse voir sa farce" loading="lazy" /></div>
+            <div class="shade shade-r"></div>
+
+            <div class="stack col-r">
+            <div class="t">
+              <p class="eyebrow">Signature</p>
+              <span class="price-chip">1&nbsp;000 FCFA <small>la box de 10</small></span>
+            </div>
+            <div class="t">
+              <h2 class="big">Croustillant <em class="grad">dehors.</em><br />Moelleux <em class="grad">dedans.</em></h2>
+            </div>
+            <div class="t">
+              <p class="body">Notre signature. Chaque néem est préparé minute pour rester doré, croustillant et parfait à partager (ou pas).</p>
+              <div class="cta-row">
+                <a class="btn btn-primary" target="_blank" rel="noopener"
+                   href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20voudrais%20commander%20une%20box%20de%2010%20n%C3%A9ems">Commander</a>
+              </div>
+            </div>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               4 · GRILLADES — une seule image de fond (poulet à gauche, vide à droite)
+               ================================================================ -->
+          <section class="scene" id="s-grill" data-name="Grillades" data-len="2.2" data-ats="0.04,0.26,0.5" aria-label="Les grillades">
+            <div class="bg"><img class="par" data-par="s:1.06,1.26;x:0,-4" data-org="22% 50%" style="object-position:20% 50%" src="assets/img/poulet-marine.webp" alt="Pilons de poulet marinés sur une ardoise, au pinceau" loading="lazy" /></div>
+            <div class="shade shade-r"></div>
+
+            <div class="stack col-r">
+            <div class="t">
+              <p class="eyebrow">Les grillades</p>
+              <h2>Poulet mariné, <em class="grad">doré à point</em>.</h2>
+            </div>
+            <div class="t">
+              <p class="body">Mariné, rôti, servi avec ses légumes grillés et ses herbes fraîches. Prix et disponibilités du jour à confirmer sur WhatsApp.</p>
+            </div>
+            <div class="t">
+              <a class="btn btn-primary" target="_blank" rel="noopener"
+                 href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20voudrais%20commander%20du%20poulet">Commander</a>
+              <div class="also">
+                <span>Aussi au menu</span>
+                <i>Mijoté aux crevettes</i><i>Salade fraîche</i><i>Plateau d'œufs</i><i>Crevettes</i>
+              </div>
+            </div>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               5 · BOX & COCKTAILS — image de fond seule
+               ================================================================ -->
+          <section class="scene" id="s-jus" data-name="Jus & cocktails" data-len="2.2" data-ats="0.04,0.26,0.5" aria-label="Jus et cocktails">
+            <div class="bg"><img class="par" data-par="s:1.08,1.26;x:-3,3;y:0,-3" style="object-position:50% 86%" src="assets/img/cocktails-panorama.webp" alt="Cocktails et jus colorés devant des fruits frais : ananas, noix de coco, kiwi, orange" loading="lazy" /></div>
+            <div class="shade shade-l"></div>
+
+            <div class="stack col-l">
+            <div class="t">
+              <p class="eyebrow">Box &amp; Cocktails</p>
+              <h2>Des jus qui <em class="grad">réveillent</em> tout.</h2>
+            </div>
+            <div class="t">
+              <p class="body">Pressés, mixés, jamais de raccourci. Trois saveurs qui racontent le pays, servies bien fraîches.</p>
+              <ul class="flavors">
+                <li><b>Ananas-Passion</b><span>solaire et acidulé</span></li>
+                <li><b>Baobab</b><span>onctueux et rafraîchissant</span></li>
+                <li><b>Foléré</b><span>la fleur d'hibiscus rubis</span></li>
+              </ul>
+            </div>
+            <div class="t">
+              <div class="cta-row">
+                <span class="price-chip">100% faits maison</span>
+                <a class="btn btn-primary" target="_blank" rel="noopener"
+                   href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20voudrais%20commander%20des%20jus%20naturels">Commander</a>
+              </div>
+            </div>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               6 · NOTRE HISTOIRE — vidéo en arrière-plan, flou + fond sombre à droite
+               ================================================================ -->
+          <section class="scene" id="s-histoire" data-name="Notre histoire" data-len="2.2" data-ats="0.04,0.26,0.5" aria-label="Notre histoire">
+            <div class="bg hi-video">
+              <video class="par" data-par="s:1.05,1.16" muted playsinline loop preload="none" poster="assets/img/chef-cuisine-poster.webp" aria-hidden="true" id="histVideo">
+                <source src="assets/video/chef-cuisine.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="hi-blur"></div>
+            <div class="hi-shade"></div>
+
+            <div class="stack col-r">
+            <div class="t">
+              <p class="eyebrow">Notre histoire</p>
+              <h2>La cuisine d'ici, <em class="grad">avec le cœur</em>.</h2>
+            </div>
+            <div class="t">
+              <p class="body">
+                Delicious by Delice, c'est l'envie de retrouver le vrai goût de la cuisine de chez nous&nbsp;: celui des recettes de famille,
+                des produits bien frais et du plaisir de partager. Pas de raccourcis, pas de chichis&nbsp;: de la fraîcheur, de la saveur, et une
+                attention pour chaque commande.
+              </p>
+            </div>
+            <div class="t">
+              <p class="hi-100"><b class="grad">100%</b> fait maison, chaque jour</p>
+              <ul class="pillars">
+                <li><span>🥬</span><b>Ultra frais</b><small>Préparé le jour même.</small></li>
+                <li><span>🏠</span><b>Fait maison</b><small>Des jus aux néems dorés.</small></li>
+                <li><span>🛵</span><b>Livré vite</b><small>Partout à Douala.</small></li>
+              </ul>
+            </div>
+            </div>
+          </section>
+
+          <!-- ================================================================
+               7 · INFOS PRATIQUES — section blanche, formes colorées
+               ================================================================ -->
+          <section class="scene light" id="s-contact" data-name="Contact" data-len="2" data-ats="0.04,0.22,0.36,0.5" aria-label="Infos pratiques">
+            <div class="flow" aria-hidden="true"></div>
+            <div class="mesh par" data-par="y:0,-10;x:0,-3" aria-hidden="true"><i class="mb mb1"></i><i class="mb mb2"></i><i class="mb mb3"></i><i class="mb mb4"></i></div>
+            <div class="shape ct-sh1 par" data-par="y:30,-45;r:0,50"></div>
+            <div class="shape ct-sh2 par" data-par="y:50,-60;x:0,10"></div>
+            <div class="shape ct-sh3 par" data-par="r:0,-90;s:1,1.2"></div>
+
+            <div class="ct-stack">
+            <div class="t ct-head">
+              <p class="eyebrow">Infos pratiques</p>
+              <h2>Venez nous voir, ou <em class="grad">on vient à vous</em>.</h2>
+            </div>
+            <div class="ct-cards">
+              <article class="ct-card c1 t">
+                <span class="ico">📍</span>
+                <h3>Notre adresse</h3>
+                <p>Bessengue, Douala<br />Face hôtel Lewatt</p>
+                <a class="lnk" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Bessengue+Douala+h%C3%B4tel+Lewatt">Voir sur la carte →</a>
+              </article>
+              <article class="ct-card c2 t">
+                <span class="ico">🛵</span>
+                <h3>Livraison rapide</h3>
+                <p>Partout à Douala. Commandez par WhatsApp, on prépare, on livre, vous savourez.</p>
+                <p class="note">Frais et délais confirmés à la commande</p>
+              </article>
+              <article class="ct-card dark c3 t">
+                <span class="ico">💬</span>
+                <h3>Commande directe</h3>
+                <p>Un message sur WhatsApp, c'est tout.</p>
+                <a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20souhaite%20commander%20%F0%9F%8D%B4">+237 6 53 32 55 23</a>
+                <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://wa.me/237693653716?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20souhaite%20commander%20%F0%9F%8D%B4">+237 6 93 65 37 16</a>
+              </article>
+            </div>
+          </div>
+          </section>
+
+        </div><!-- /world -->
+      </div><!-- /stage -->
+    </div><!-- /track -->
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="footer">
+    <div class="ft-in">
+      <div class="ft-call">
+        <h2>Une petite faim&nbsp;? <em class="grad">On y va.</em></h2>
+        <a href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20souhaite%20commander%20%F0%9F%8D%B4" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+          Commander sur WhatsApp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="ft-grid">
+        <div>
+          <a href="#accueil" data-go="0" class="logo big" aria-label="Retour en haut">
+            <img src="assets/logo.png" alt="Delicious by Delice" onerror="this.parentElement.classList.add('nologo');this.replaceWith(Object.assign(document.createElement('span'),{textContent:'Delicious by Delice'}))" />
+          </a>
+          <p class="ft-tag">La fraîcheur et la saveur à chaque bouchée&nbsp;!</p>
+        </div>
+        <nav aria-label="Pied de page">
+          <p class="ft-h">Explorer</p>
+          <ul>
+            <li><a href="#menu" data-go="2">Menu</a></li>
+            <li><a href="#experience" data-go="5">Box &amp; Cocktails</a></li>
+            <li><a href="#histoire" data-go="6">Notre Histoire</a></li>
+            <li><a href="#contact" data-go="7">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="ft-h">Nous suivre &amp; nous écrire</p>
+          <ul>
+            <li><a href="https://www.tiktok.com/@delice_nours" target="_blank" rel="noopener">TikTok · @delice_nours</a></li>
+            <li><a href="https://wa.me/237653325523" target="_blank" rel="noopener">WhatsApp · +237 6 53 32 55 23</a></li>
+            <li><a href="https://wa.me/237693653716" target="_blank" rel="noopener">WhatsApp · +237 6 93 65 37 16</a></li>
+            <li class="muted">Bessengue, Douala · face hôtel Lewatt</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ft-bottom">
+        <p>© <span id="year">2026</span> Delicious by Delice. Tous droits réservés.</p>
+        <p>Commande rapide par WhatsApp · Livraison partout à Douala</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barre de commande mobile -->
+  <div id="orderBar">
+    <a href="https://wa.me/237653325523?text=Bonjour%20Delicious%20by%20Delice%2C%20je%20souhaite%20commander%20%F0%9F%8D%B4" target="_blank" rel="noopener" class="btn btn-primary">
+      Commander sur WhatsApp
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/fx.js"></script>
+</body>
+</html>

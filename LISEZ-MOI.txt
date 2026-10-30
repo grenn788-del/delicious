@@ -1,0 +1,50 @@
+DELICIOUS BY DELICE — site immersif (scroll piloté, arrière-plans animés)
+
+Ouvrir index.html (ou mettre le dossier sur l'hébergement tel quel).
+Si vous testez en local, utilisez un petit serveur (ex. "python3 -m http.server") pour que la vidéo se charge bien.
+
+Structure
+  index.html            contenu
+  css/style.css         styles
+  js/main.js            moteur de scroll (aucune librairie)
+  js/fx.js              effets souris propres à chaque partie (étape 2)
+  assets/img/*.webp     images converties en WebP
+  assets/video/         vidéo du chef (utilisée en fond de "Notre histoire")
+  assets/logo.png       À AJOUTER : votre logo (sinon le nom s'affiche en texte)
+
+Comment ça marche
+  Chaque section est une "scène". Le scroll est lissé puis pilote une seule chronologie :
+  l'arrière-plan avance (zoom / glissement) et les textes apparaissent l'un après l'autre
+  (haut, milieu, bas). Entre deux scènes : fondu enchaîné, les textes s'évaporent.
+  Le scroll est un ressort amorti (sans rebond). Les textes apparaissent mot par mot,
+  puis flottent en boucle. Les sections blanches ont un dégradé qui vit en continu.
+
+Réglages utiles
+  index.html  data-len      longueur de scroll d'une scène (en écrans, ex. 2.2)
+  index.html  data-ats      moment d'apparition des textes (0 à 1) dans la scène
+  index.html  data-par      mouvement de l'arrière-plan : s=zoom, x/y=glissement (%), r=rotation
+  js/main.js  T = 0.5       durée du fondu entre deux scènes
+  js/main.js  HOLD = 6500   durée de chaque image du diaporama d'accueil (ms)
+  Sections blanches : classe "light" sur la <section> (Manifeste, Infos pratiques)
+
+--- ÉTAPE 1 (mise à jour) ---
+  - Espacements resserrés : titre + paragraphe + boutons sont groupés (.stack, .mf-stack, .ct-stack)
+  - Plus aucun texte en contour : tout est plein
+  - Sections blanches : elles descendent du haut comme un rideau (js/main.js, "dropIn")
+  - Accueil : poussière d'étoiles fine qui suit la souris / le doigt (#stardust)
+
+--- ÉTAPE 2 (effets souris, un par partie — js/fx.js) ---
+  Accueil          poussière d'étoiles (inchangée, étape 1)
+  Manifeste        gouttes colorées : elles tombent du curseur, éclaboussent le fond et leurs taches se mélangent
+  Grillades        fumée : un filet monte du curseur (même à l'arrêt), tourbillonne et se pousse au geste
+  Box & Cocktails  ondes de flou : des anneaux qui floutent l'image s'élargissent depuis le curseur
+  Notre histoire   lucioles : elles flottent seules, scintillent et viennent tournoyer autour du curseur
+  Clic (ou tape sur mobile) = grosse rafale de l'effet de la partie en cours.
+  Sur mobile/tablette : effets déclenchés au toucher ; le défilement n'en lance pas.
+  Mode « réduire les animations » : tous les effets sont désactivés.
+
+  Réglages utiles (js/fx.js, en haut de chaque bloc)
+    MAX / MAXD / MAXS  nombre maximum de particules (baisser si l'appareil rame)
+    BASE / EXTRA       lucioles permanentes / lucioles réveillées par la souris
+    COLS               couleurs des gouttes (liste « r,g,b »)
+  css/style.css (fin)  .fx-ring / .fx-lens : intensité du flou des ondes (blur(10px))
